@@ -1,0 +1,1943 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px yellow solid; */
+}
+
+body {
+    text-align: center;
+    background-color: black;
+}
+
+/* navigation menu for the 4 pages*/
+
+.burger-icon {
+    width: 40px;
+    height: 32px;
+    /* display: flex; // Only in mobile view */
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.burger-line {
+    height: 20%;
+    width: 100%;
+    background-color: #FFF;
+}
+    
+
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(0, 0, 0, 0.278);
+    color: #FFF;
+    padding: 10px;
+    border-bottom: 2px solid red;
+}
+
+
+nav > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul > li {
+    margin: 0 50px;
+}
+
+nav > ul > li > a {
+    font-family: "Avenir Next", sans-serif;
+    color: #FFF;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.underline-hover {
+    background: -webkit-gradient(linear, left bottom, left top, from(red), to(red)) no-repeat right bottom / 0 var(--bg-h);
+    background: -o-linear-gradient(bottom, red, red) no-repeat right bottom / 0 var(--bg-h);
+    background: linear-gradient(0deg, red, red) no-repeat right bottom / 0 var(--bg-h);
+    -webkit-transition: background-size 350ms;
+    -o-transition: background-size 350ms;
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+.underline-hover:where(:hover,
+ :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+.underline {
+    padding-bottom: 2px;
+    --bg-h: 2px;
+}
+
+.underline-hover {
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+}
+
+@media screen and (max-width: 1323px) {
+    nav {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    
+    nav > ul {
+        display: none; 
+        padding-top: 10px;
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+    }
+
+    .burger-icon {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    /* Toggle with JS */
+    .show-menu-items { 
+        display: -webkit-box; 
+        display: -ms-flexbox; 
+        display: flex;
+    }
+}
+
+/* Index.html below of nav */
+.background-gray {
+    background-color: rgb(23, 23, 23);
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    height: 100vh;
+}
+
+.logo {
+    text-align: center;
+    font-size: 100px;
+    color: red;
+    position: relative;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    text-shadow: 0px 0px 40px black;
+}
+
+.sub {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    text-shadow: 0px 0px 40px black;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.introduction {
+    position: absolute;
+    max-width: 30rem;
+    text-align: center;
+    font-size: 20px;
+    padding: 15rem 5rem;
+    margin-left: 6rem;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 0px 0px 40px black;
+}
+
+.introduction h1 {
+    color: white;
+    font-family: "Avenir Next", sans-serif;
+}
+
+.introduction p {
+    color: rgba(255, 255, 255, 0.838);
+    font-family: "Avenir Next", sans-serif;
+}
+
+.introduction a {
+    font-size: 30px;
+    background: -o-linear-gradient(45deg, transparent 5%, red 5%);
+    background: linear-gradient(45deg, transparent 5%, red 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 88px;
+    -webkit-box-shadow: 6px 0px 0px white;
+            box-shadow: 6px 0px 0px white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #303952;
+    z-index: 1;
+    opacity: .60;
+}
+
+.header-content {
+    z-index: 2;
+}
+
+.header-content h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.header-content p {
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 2rem;
+}
+
+/*  */
+
+.btn {
+    background: #c44569;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.parent {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+/* footer */
+
+.footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: white;
+    background-color: black;
+    border-top: 100px solid #040404;
+}
+
+.footer>* {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 100%;
+            flex: 1 100%;
+}
+
+.footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+}
+
+.footer__logo {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.nav__title {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.footer address {
+    font-style: normal;
+    color: #999;
+}
+
+.footer__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 36px;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #999;
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0 1.3em;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer li {
+    line-height: 2em;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+}
+
+.footer__nav>* {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 50%;
+            flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+.nav__ul a {
+    color: #999;
+    font-size: 15px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    color: #fff;
+}
+
+.fa-facebook {
+    background: black;
+    color: white;
+}
+
+.fa-instagram {
+    background: black;
+    color: white;
+}
+
+.fa-instagram {
+    background: black;
+    color: white;
+}
+
+.nav__ul--extra {
+    -moz-column-count: 1;
+         -webkit-column-count: 1;
+            column-count: 1;
+    -moz-column-gap: 1.25em;
+         -webkit-column-gap: 1.25em;
+            column-gap: 1.25em;
+}
+
+.legal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    color: #999;
+    font-size: 15px;
+}
+
+.legal__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.heart {
+    color: #2f2f2f;
+}
+
+.nav h3 {
+    padding: 30%;
+    display: block;
+}
+
+.nav a {
+    text-decoration: none;
+    color: red;
+    font-family: "Avenir Next", sans-serif;
+}
+
+footer {
+    background-color: white;
+}
+/* PAGE ACTIVITIES */
+
+.container-activities {
+    height: 150vh;
+    width: 100%;
+    background-position: center;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("/images/h1_hero.png");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/h1_hero.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/h1_hero.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.logo-menu {
+    width: 100%;
+    text-align: center;
+}
+
+.logo-activities {
+    text-align: center;
+    display: inline flow-root list-item;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.img-box-activities img {
+    width: 100%;
+    padding: 15px;
+}
+/* PAGE   Our facilities */
+
+.container-facilities {
+    height: 80vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    padding: 15%;
+}
+
+.container-facilities h1 {
+    color: white;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 100px;
+    text-shadow: 0px 0px 40px black;
+}
+
+.container-facilities a {
+    font-size: 30px;
+    background: -o-linear-gradient(45deg, transparent 5%, red 5%);
+    background: linear-gradient(45deg, transparent 5%, red 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 88px;
+    -webkit-box-shadow: 6px 0px 0px white;
+            box-shadow: 6px 0px 0px white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.brisbane-city {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0))), url("/images/facilities5.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities5.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities5.jpg");
+}
+
+.ashgrove {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0))), url("/images/facilities6.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities6.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities6.jpg");
+}
+
+.chermside {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0))), url("/images/facilities7.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities7.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities7.jpg");
+}
+
+.graceville {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))), url("/images/facilities9.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("/images/facilities9.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("/images/facilities9.jpg");
+}
+
+.westlake {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))), url("/images/facilities4.2.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("/images/facilities4.2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("/images/facilities4.2.jpg");
+}
+
+.logo-menu {
+    width: 100%;
+    text-align: center;
+}
+
+.logo-activities {
+    text-align: center;
+    display: inline flow-root list-item;
+    text-decoration: none;
+    list-style-type: none;
+}
+/* page shop */
+
+.introduction-shop {
+    position: absolute;
+    max-width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 15rem 0rem 0rem 0rem;
+    margin: auto 30%;
+    text-align: center;
+    text-shadow: 0px 0px 40px black;
+}
+
+.introduction-shop h1 {
+    color: white;
+    font-family: 'Avenir Next, sans-serif';
+    font-size: 100px;
+    border-bottom: double #555;
+}
+
+.introduction-shop p {
+    color: rgb(185, 184, 184);
+    font-family: 'Avenir Next, sans-serif';
+    font-size: 50px;
+    margin: 1px;
+    padding: 1px;
+}
+
+.box-shop a {
+    font-size: 30px;
+    background: -o-linear-gradient(45deg, transparent 5%, red 5%);
+    background: linear-gradient(45deg, transparent 5%, red 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 88px;
+    -webkit-box-shadow: 6px 0px 0px white;
+            box-shadow: 6px 0px 0px white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.box-shop {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box-shop div {
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+.box-shop-img {
+    padding-right: 188px;
+}
+
+.container-shop {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("/images/shop-presentation.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/shop-presentation.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/shop-presentation.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+
+.tile img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.tile:nth-child(1) {
+    -ms-grid-column-span: 4;
+    grid-column: span 4;
+    -ms-grid-row-span: 2;
+    grid-row: span 2;
+}
+
+.tile:nth-child(2),
+.tile:nth-child(3) {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+}
+
+.tile:nth-child(4),
+.tile:nth-child(5) {
+    -ms-grid-column-span: 3;
+    grid-column: span 3;
+}
+
+.space-footer-conetnt-shop {
+    height: 50%;
+}
+/* page staff */
+
+.img-box-owner{
+    width: 100%;
+    padding: 250px;
+}
+
+
+
+.container-staff {
+    height: 100vh;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("/images/about.png");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/about.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/about.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.introduction-staff {
+    position: absolute;
+    max-width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 15rem 0rem 0rem 0rem;
+    margin: auto 20%;
+    text-align: center;
+    text-shadow: 0px 0px 40px black;
+}
+
+.introduction-staff h1 {
+    color: #c9d0d4;
+    font-family: 'Avenir Next, sans-serif';
+    font-size: 100px;
+    border-bottom: double #555;
+}
+
+.introduction-staff p {
+    color: rgb(185, 184, 184);
+    font-family: 'Avenir Next, sans-serif';
+    font-size: 50px;
+    margin: 1px;
+    padding: 1px;
+}
+
+.box-act-staff {
+    padding-right: 188px;
+    padding-top: 15%;
+}
+
+.staffs {
+    border: solid 2px;
+    padding: 10%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 15% auto 15% auto;
+    grid-template-columns: auto auto auto;
+    gap: 15%;
+}
+
+.staff-pro {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.crew h1 {
+    color: white;
+    font-size: 30px;
+}
+
+.crew p {
+    color: #999;
+    font-size: 20px;
+}
+
+.staff-content {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+
+/* pages contact */
+
+/* form is the coloum */
+.form {
+    background-color:#222;
+    border-radius: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 100%;
+    padding: 30px;
+    margin: 100px;
+    width: 320px;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    border: red 1px solid;        
+    
+  }
+
+  form h1 {
+    color: white;
+    font-size: 30px;
+  }
+
+   /* this part of form-row help to not hide the input no required
+    if you put in the media query "display: grid; the second form "Registration"
+    will positioned below of the contact form when is using in mobile view. */
+ .form-row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+ } 
+
+ @media screen and (max-width: 1323px){
+    .form-row{
+        display: -ms-grid;
+        display: grid;
+    }
+
+    /*
+     this part of the code is when the "width: 100%" will
+    remove the input and won't have space in both sides. 
+     */
+    .form {
+        margin: 30px auto;
+        width: 100%;
+    }
+
+    form {
+        margin: 100px auto;
+        width: 70%;
+    }
+/* 
+hiding input on mobile view will hide three input which are:
+-email.
+-fax.
+-message.
+*/
+    .hide-input{
+        display: none;
+    }
+
+
+ }
+
+/* icons in each text */
+/* .icon-name {
+    background-image: url(/images/person-circle-outline.svg);
+    position: relative;
+}
+.icon-username {
+    background-image: url(icon.png);
+    position: relative;
+}
+.icon-email {
+    background-image: url(icon.png);
+    position: relative;
+}
+.icon-phone {
+    background-image: url(icon.png);
+    position: relative;
+}
+.icon-fax {
+    background-image: url(icon.png);
+    position: relative;
+}
+.icon-messenger {
+    background-image: url(icon.png);
+    position: relative;
+}
+.icon-username {
+    background-image: url(icon.png);
+    position: relative;
+}
+.icon-password {
+    background-image: url(icon.png);
+    position: relative;
+} */
+
+
+.icon-name::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/iconmonstr-user-19-240.png);
+}
+
+.icon-username::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/iconmonstr-user-8-240.png);
+}
+
+.icon-email::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/iconmonstr-mail-thin-240.png);
+}
+
+.icon-phone::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/iconmonstr-phone-thin-240.png);
+}
+
+.icon-fax::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/iconmonstr-fax-2-240.png);
+}
+
+.icon-messenger::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/iconmonstr-pencil-square-filled-240.png);
+}
+
+.icon-username::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/iconmonstr-user-8-240.png);
+}
+
+.icon-password::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/iconmonstr-key-12-240.png);
+}
+
+
+ /* required "*" for name and phone */
+.required::before {
+  content: "*";
+  color: red;
+  padding-left: 5px; 
+}
+
+  .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+    box-sizing: content-box;
+    padding-bottom: 30px;
+  }
+  
+  .ic2 {
+    margin-top: 30px;
+    box-sizing: content-box;
+    padding-bottom: 30px;
+
+  }
+  
+  .form-control {
+    background-color: #442b2b;
+    border-radius: 12px;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+
+  /*the user will have a hover effect when hovering the pointer
+   near the inptu will change the colour automatically and 
+   in turn we are using the CSS :nth-child() Selector.  */
+  main>section:nth-child(2)>section>form>div>input:hover {
+      background-color: #813b3b;
+      position: relative;
+      top: -4px;
+ }
+    
+    /* this funtion is to focus the input 
+    example: the user can see where is writ */
+  .form-control:focus{
+    border: 4px dashed red;
+    outline: none;
+  }
+  
+  .placeholder {
+    color: #6e6e6e;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    -webkit-transform-origin: 0 50%;
+        -ms-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+    -webkit-transition: color 200ms, -webkit-transform 200ms;
+    transition: color 200ms, -webkit-transform 200ms;
+    -o-transition: transform 200ms, color 200ms;
+    transition: transform 200ms, color 200ms;
+    transition: transform 200ms, color 200ms, -webkit-transform 200ms;
+    top: 20px;
+  }
+  
+  .span-red{
+    color: red;
+  }
+
+  /* valid or invalid things */
+
+  /* icon validation name */
+  #form-1 .v-name{
+    position: relative;
+  }
+
+  #form-1.name-valid .v-name:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  #form-1.name-invalid .v-name:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/invalid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  /* icon validation email */
+
+  #form-1 .v-email{
+    position: relative;
+  }
+
+  #form-1.email-valid .v-email:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  #form-1.email-invalid .v-email:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/invalid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  /* icon validation phone */
+
+  #form-1 .v-phone{
+    position: relative;
+  }
+
+  #form-1.phone-valid .v-phone:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  #form-1.phone-invalid .v-phone:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/invalid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+   /* icon validation fax */
+
+   #form-1 .v-fax{
+    position: relative;
+  }
+
+  #form-1.fax-valid .v-fax:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  #form-1.fax-invalid .v-fax:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/invalid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  /* icon validation message */
+
+  #form-1 .v-message{
+    position: relative;
+  }
+
+  #form-1.message-valid .v-message:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  #form-1.message-invalid .v-message:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/invalid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  /* choose location */
+  .bg-custom-color {
+    background-color: #442b2b;
+    color: white;
+}
+.bg-custom-color:hover {
+    background-color:   #813b3b;
+}
+
+  /* form for registration */
+  /* username */
+
+  #form-2 .v-r-username{
+    position: relative;
+  }
+
+  #form-2.r-username-valid .v-r-username:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  #form-2.r-username-invalid .v-r-username:before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url("/images/invalid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+
+  .password-requiredments{
+        color: rgb(255, 0, 0);
+        border: 1px solid red;
+        margin: 342px 10px 98px -85px;
+        padding-top: 10px;
+        list-style: inside;
+  }
+
+  .password-valid{
+        color: green;
+        border: 1px solid green;
+        margin: 455px 10px 98px -85px;
+        padding-top: 10px;
+        list-style: inside;
+  }
+
+
+  /* this is a button to submit in the contact form and registration form*/
+  
+  .submit {
+    background-color: red;
+    color: #eee;
+    border-radius: 12px;
+    border: 1px red solid;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* this function help when the user
+   hold the botton is turn white */
+  .submit:active {
+    background-color: white;
+    color: red;
+  }
+
+  .submit:hover{
+    background-color: rgb(253, 95, 95);
+  }
+
+
+
+
+.bg-st1 {
+    background-image: url(/images/staff1.jpg);
+}
+
+.bg-st2 {
+    background-image: url(/images/staff2.jpg);
+}
+
+.bg-st3 {
+    background-image: url(/images/staff3.jpg);
+}
+
+
+.staff-content a {
+    font-size: 40px;
+    color: #ffffff !important;
+    font-family: 'Avenir Next, sans-serif';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    cursor: pointer;
+    text-shadow: 10px 0px 20px black;
+    z-index: -1;
+    /*text-decoration: none;*/
+}
+
+.staff-pro:hover .staff-content,
+.staff-pro:focus .staff-content {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+.staff-pro:hover .staff-content:before,
+.staff-pro:focus .staff-content:before {
+    display: block;
+}
+
+.staff-pro:hover a,
+.staff-pro:focus a {
+    display: block;
+    z-index: 1;
+}
+
+.staff-content:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 73, 94, 0.75);
+}
+
+/* logo */
+.logo-pages {
+    font-size: 100px;
+    color: red;
+    position: relative;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    text-shadow: 0px 0px 40px black;
+}
+
+.sub-pages {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    text-shadow: 0px 0px 40px black;
+}
+
+.introduction-activities {
+    position: absolute;
+    max-width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10rem 0rem 0rem 0rem;
+    margin: auto 15%;
+    text-align: center;
+    text-shadow: 0px 0px 40px black;
+}
+
+.introduction-activities p {
+    color: #c9d0d4;
+    font-family: 'Avenir Next, sans-serif';
+    font-size: 50px;
+    border-bottom: double #555;
+}
+
+.introduction-activities span {
+    color: rgb(185, 184, 184);
+    font-family: 'Avenir Next, sans-serif';
+    font-size: 30px;
+    margin: 1px;
+    padding: 1px;
+}
+
+.box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text-box {
+    width: auto;
+    height: auto;
+    padding: 15%;
+    text-align: initial;
+    
+}
+
+.text-box h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.text-box p {
+    color: #999;
+    font-size: 20px;
+}
+
+.img-box img {
+    width: 100%;
+    padding: 15px 200px;
+}
+
+
+.box-act-left {
+    padding-left: 196px;
+}
+
+.box-act-right {
+    padding-right: 188px;
+}
+
+/* chatbots */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+-webkit-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+
+
+/* Set core root defaults */
+html:focus-within {
+scroll-behavior: smooth;
+}
+
+
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+-webkit-text-decoration-skip: ink;
+      text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+max-width: 100%;
+display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* input,
+button,
+textarea,
+select {
+font: inherit;
+} */
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+html:focus-within {
+scroll-behavior: auto;
+}
+
+*,
+*::before,
+*::after {
+-webkit-animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+-webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+-webkit-transition-duration: 0.01ms !important;
+     -o-transition-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+scroll-behavior: auto !important;
+}
+}
+
+
+
+/* GLOBAL STYLES */
+:root {
+--red: #ff0000e3;
+--grey: #F5F5F5;
+--grey-d-1: #EEE;
+--grey-d-2: #DDD;
+--grey-d-3: #888;
+--white: #FFF;
+--dark: #222;
+}
+/* GLOBAL STYLES */
+
+
+/* CHATBOX */
+.chatbox-wrapper {
+position: fixed;
+bottom: 2rem;
+right: 2rem;
+width: 4rem;
+height: 4rem;
+text-rendering: optimizeSpeed;
+line-height: 1.5;
+font-family: 'Poppins', sans-serif;
+}
+.chatbox-toggle {
+width: 100%;
+height: 100%;
+background: var(--red);
+color: var(--white);
+font-size: 2rem;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+border-radius: 50%;
+cursor: pointer;
+-webkit-transition: .2s;
+-o-transition: .2s;
+transition: .2s;
+}
+.chatbox-toggle:active {
+-webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+        transform: scale(.9);
+}
+.chatbox-message-wrapper {
+position: absolute;
+bottom: calc(100% + 1rem);
+right: 0;
+width: 420px;
+border-radius: .5rem;
+overflow: hidden;
+-webkit-box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, .1);
+        box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, .1);
+-webkit-transform: scale(0);
+    -ms-transform: scale(0);
+        transform: scale(0);
+-webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+        transform-origin: bottom right;
+-webkit-transition: .2s;
+-o-transition: .2s;
+transition: .2s;
+}
+.chatbox-message-wrapper.show {
+-webkit-transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
+}
+.chatbox-message-header {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+background: var(--white);
+padding: .75rem 1.5rem;
+}
+.chatbox-message-profile {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+grid-gap: .5rem;
+}
+.chatbox-message-image {
+width: 3rem;
+height: 3rem;
+-o-object-fit: cover;
+   object-fit: cover;
+border-radius: 50%;
+}
+.chatbox-message-name {
+font-size: 1.125rem;
+font-weight: 600;
+}
+.chatbox-message-status {
+font-size: .875rem;
+color: var(--grey-d-3);
+}
+.chatbox-message-dropdown {
+position: relative;
+}
+.chatbox-message-dropdown-toggle {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+width: 2.5rem;
+height: 2.5rem;
+font-size: 1.25rem;
+cursor: pointer;
+border-radius: 50%;
+}
+.chatbox-message-dropdown-toggle:hover {
+background: var(--grey);
+}
+.chatbox-message-dropdown-menu {
+list-style: none;
+margin: 0;
+position: absolute;
+top: 100%;
+right: 0;
+background: var(--white);
+padding: .5rem 0;
+width: 120px;
+-webkit-box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, .1);
+        box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, .1);
+-webkit-transform: scale(0);
+    -ms-transform: scale(0);
+        transform: scale(0);
+-webkit-transform-origin: top right;
+    -ms-transform-origin: top right;
+        transform-origin: top right;
+-webkit-transition: .2s;
+-o-transition: .2s;
+transition: .2s;
+border-radius: .5rem;
+}
+.chatbox-message-dropdown-menu.show {
+-webkit-transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
+}
+.chatbox-message-dropdown-menu a {
+font-size: .875rem;
+font-weight: 500;
+color: var(--dark);
+text-decoration: none;
+padding: .5rem 1rem;
+display: block;
+}
+.chatbox-message-dropdown-menu a:hover {
+background: var(--grey);
+}
+.chatbox-message-content {
+background: var(--grey);
+padding: 1.5rem;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+grid-row-gap: 1rem;
+max-height: 300px;
+overflow-y: auto;
+}
+.chatbox-message-item {
+width: 90%;
+padding: 1rem;
+}
+.chatbox-message-item.sent {
+-ms-flex-item-align: end;
+    align-self: flex-end;
+background: var(--red);
+color: var(--white);
+border-radius: .75rem 0 .75rem .75rem;
+}
+.chatbox-message-item.received {
+background: var(--white);
+border-radius: 0 .75rem .75rem .75rem;
+-webkit-box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, .05);
+        box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, .05);
+}
+.chatbox-message-item-time {
+float: right;
+font-size: .75rem;
+margin-top: .5rem;
+/* display: inline-block; */
+}
+.chatbox-message-bottom {
+background: var(--white);
+padding: .75rem 1.5rem;
+}
+.chatbox-message-form {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+background: var(--grey);
+border-radius: .5rem;
+padding: .5rem 1.25rem;
+}
+.chatbox-message-input {
+background: transparent;
+outline: none;
+border: none;
+resize: none;
+scrollbar-width: none;
+}
+.chatbox-message-input::-webkit-scrollbar {
+display: none;
+}
+.chatbox-message-submit {
+font-size: 1.25rem;
+color: var(--red);
+background: transparent;
+border: none;
+outline: none;
+cursor: pointer;
+}
+.chatbox-message-no-message {
+font-size: 1rem;
+font-weight: 600;
+text-align: center;
+}
+/* CHATBOX */
+
+
+
+
+
+
+
+/* BREAKPOINTS */
+@media screen and (max-width: 576px) {
+.chatbox-message-wrapper {
+    width: calc(100vw - 2rem);
+}
+.chatbox-wrapper {
+    bottom: 1rem;
+    right: 1rem;
+}
+}
+/* BREAKPOINTS */
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1323px) {
+    .legal .legal__links {
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 1323px) {
+    .footer__nav>* {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+    }
+    .nav__item--extra {
+        -webkit-box-flex: 2;
+            -ms-flex-positive: 2;
+                flex-grow: 2;
+    }
+    .footer__addr {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0px;
+                flex: 1 0px;
+    }
+    .footer__nav {
+        -webkit-box-flex: 2;
+            -ms-flex: 2 0px;
+                flex: 2 0px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .parent {
+        width: 100%;
+        margin: 20px 0px
+    }
+    .wrapper {
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .introduction {
+        margin: 1px;
+    }
+    
+}
+
+@media screen and (max-width: 1323px) {
+    .box-shop {
+        display: block;
+    }
+    .box-act-right {
+        padding: 0;
+    }
+    .box-shop-img {
+        padding: 1%;
+    }
+    .img-box img {
+        width: 100%;
+        padding: 15px 15px;
+    }
+    .img-box-owner{
+        padding: 50px 113px;
+    }
+}
+
+@media screen and (max-width: 1323px) {
+    .container-activities {
+        height: 150vh;
+    }
+    
+  
+    .introduction-activities {
+        position: absolute;
+        max-width: 100%;
+        text-align: center;
+        font-size: 20px;
+        padding: 0rem 0rem 0rem 0rem;
+        margin: auto 0%;
+        text-align: center;
+        text-shadow: 0px 0px 40px black;
+    }
+    .introduction-activities p {
+        font-size: 30px;
+        padding: 50px;
+    }
+
+    
+    .introduction-activities span {
+        font-size: 20px;
+
+    }
+    
+}
+
+@media screen and (max-width: 1323px) {
+    .container-facilities {
+        height: 70vh;
+        background-attachment: inherit;
+        padding: 20% 0;
+    }
+    .box {
+        display: block;
+    }
+    .box-act-left {
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 1323px) {
+    .introduction-shop {
+        position: inherit;
+        padding: 1px;
+        margin: 1px;
+    }
+    .introduction-shop h1 {
+        font-size: 50px;
+    }
+    .introduction-shop p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1323px) {
+    .container-staff {
+        height: 50vh;
+    }
+    .box-act-staff {
+        padding: 0;
+        margin: 0;
+    }
+    .introduction-staff {
+        padding: 1px;
+        margin-top: 50px;
+    }
+    .introduction-staff h1 {
+        font-size: 50px;
+    }
+    .introduction-staff p {
+        font-size: 25px;
+    }
+    .staffs {
+        display: block;
+    }
+    .staff-pro {
+        height: 1000px;
+    }
+    @media screen and (max-width: 800px) {
+        .staff-pro {
+            height: 500px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1323px) {
+    .columns {
+        width: 100%;
+    }
+}
+
+/* @media only screen and (max-width: 1050px) {
+    .form-style-1 {
+        max-width: 100%;
+    }
+
+    .form-style-1 .field-divided {
+        width: 100%;
+    }
+} */

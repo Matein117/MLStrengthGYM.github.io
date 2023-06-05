@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JavaScript/script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Contact</title>
+</head>
+
+<body>
+    <main>
+        <header class="logo-menu">
+            <!--output of the component nav = menu bar -->
+            <nav class="nav-component"></nav>
+        </header>
+
+        <!-- form -->
+
+        
+        
+        <section class="background-gray">
+
+            <!-- 
+                pattters:
+                One alphabet = [a-zA-Z]
+                Only Alphabets = ^[a-zA-Z]*$
+                Only Alphabets & whitespace = ^[a-zA-Z ]*$
+                One Number = [0-9]  
+                Only numbers = ^[0-9]*$
+                Only Number & whitespace = ^[0-9 ]*$
+                Only number. Alphabets & Whitespace = ^[a-zA-Z0-9 ]*$
+                Allow Number between 6-10 characters long = [0-9]{6,10}
+                Allow Aphabets between 6-10 characters long = [a-zA-Z]{6,10}
+                Allow Aphabets & numbers between 6-10 characters long = [a-zA-Z0-9]{6,10}   
+                pattern="^([a-z0-9]+(?:[.!#$%&'*+\\/=?^_`{|}~-][a-z0-9]+)*)@([a-z0-9]+(?:[.-][a-z0-9]+)*\.[a-z]{2,})$"
+             -->
+
+
+
+            <section class="form-row">
+
+                <form id="form-1" class="form-messenger form" name="myForm" method="post" onsubmit="return validateForm()">
+
+                    <h1>Contact us!</h1>
+
+                    <div class="input-container v-name ic1">
+                        <!-- name -->
+
+                        <label for="your-name" class="placerholder text-white ... required icon-name" >Please enter your name.</label> 
+                        <input 
+                        id="your-name" 
+                        type="text" 
+                        name="your-name" 
+                        class="form-control" 
+                        placeholder="Enter your Name / e.g.: Nick" 
+                        onkeydown="validationName()" 
+                        pattern="^[a-zA-Z ]*$" 
+                        title="only names are allowed (characters from A to Z)"
+                        required>
+                        
+                        <span id="error-name" class="span-red"></span>
+                        <span id="text-name"></span>
+                    </div>
+
+                    <!-- hide-input with @media query -->
+                    <!-- email -->
+                    <div class="input-container v-email ic2 hide-input"> 
+                        <label for="your-email" class="placerholder text-white ... icon-email">Please enter your email</label> 
+                        <input 
+                        id="your-email" 
+                        type="email" 
+                        name="your-email" 
+                        class="form-control" 
+                        placeholder="Enter your Email / e.g.: youremail123@gmail." 
+                        onkeydown="validationEmail()"
+                        >
+                        
+                        <span id="error-email" class="span-red"></span>
+                        <span id="text-email"></span>
+                    </div>
+                    <!-- phone -->
+                    <div class="input-container v-phone ic2">
+                        <!-- <label for="your-phone" class="text-white ..." >Please enter your phone.</label> -->
+                        
+                        <label for="your-phone" class="placerholder text-white ... required icon-phone icon-size">Please enter your phone.</label> 
+                        <input 
+                        id="your-phone" 
+                        type="number" 
+                        name="your-phone" 
+                        class="form-control" 
+                        placeholder="Enter your Phone / e.g.: +61 123456789 or 0123456789" 
+                        onkeydown="validationPhone()" 
+                        pattern="^([+]?\d{1,2}[-\s]?|)\d{3}[-\s]?\d{3}[-\s]?\d{4}$" 
+                        title="Phone number should be 10 digit or (+61) with 9 digit"
+                        required>
+                        
+                        
+                        <span id="error-phone" class="span-red"></span>
+                        <span id="text-phone"></span>
+                    </div>
+                    <!-- Fax -->
+                    <div class="input-container v-fax ic2 hide-input">
+                        
+                        <label for="your-fax" class="placerholder text-white ... icon-fax">Please enter your fax.</label> 
+                        <input 
+                        id="your-fax" 
+                        type="number" 
+                        name="your-fax" 
+                        class="form-control" 
+                        placeholder="Enter your fax / e.g.: 123456789" 
+                        onkeydown="validationFax()" 
+                        pattern="/^(?=(\D*\d){8,10}\D*$)([+]?\d{1,2}[-\s]?|)\d{3}[-\s]?\d{3}[-\s]?\d{4}$/" 
+                        title="Fax number should be 10 digit">
+                        <span id="error-fax" class="span-red"></span>
+                        <span id="text-fax"></span>
+                    </div>
+
+                    <!--Select Location-->
+                    <div class="input-container v-fax ic2 hide-input">
+                        
+                        <label for="your-location" class="placerholder text-white ... icon-fax">Please choose a location.</label> 
+                        <select
+                            class="block appearance-none w-full bg-custom-color py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-red focus:border-gray-500">          
+                            <option>Ashgrove</option>
+                            <option>Brisbane City</option>
+                            <option>Chermside</option>
+                            <option>Graceville</option>
+                            <option>Westlake</option>
+                        </select>
+                    </div>
+                    <!-- text area -->
+                    <div class="input-container v-message ic2 hide-input">
+                        
+                        <label for="your-message" class="placerholder text-white ... icon-messenger">Please enter your message.</label>
+                        <textarea 
+                            id="your-message" 
+                            name="your-message" 
+                            class="form-control" 
+                            rows="10" 
+                            placeholder="Enter your Message" 
+                            onkeydown="validationMessage()"
+                            pattern="^[a-z\d\-_\s]+$" 
+                            title="leave your message here.">
+                        </textarea>
+                        
+                        <span id="error-message" class="span-red"></span>
+                        <span id="text-message"></span>
+                    </div>
+                    
+                        <input type="submit" class="submit" value="Send">
+                    
+                </form>
+
+
+                <!-- form registration -->
+                
+                <form id="form-2" class="form-registration form" name="myRegistration" method="post" onsubmit="return validateRegistration()">
+                    <h1>Registration!</h1>
+                    
+                    <!-- username -->
+                    <div class="input-container v-r-username ic1">
+                        <label for="your-username" class="text-white ... required icon-username">Please your username.</label>
+                        <input 
+                            id="your-username" 
+                            type="text" 
+                            name="your-username" 
+                            class="form-control" 
+                            placeholder="Enter your Username / e.g.: user123" 
+                            onkeydown="validationUsernameRegistration()" 
+                            pattern="^[a-zA-Z0-9 ]*$" 
+                            title="only usernames are allowed (characters from A to Z & numbers)"
+                            required>
+                        
+                        <label for="your-username" class="placerholder" ></label> <span id="error-username" class="span-red"></span>
+                        <span id="r-text-username"></span>
+                    </div>
+
+                    <!-- name -->
+                    <div class="input-container ic2">
+                        <label for="your-name-registration" class="text-white ... required icon-name">Please enter your name.</label>
+                        <input 
+                        id="your-name-registration" 
+                        type="text" 
+                        name="your-name-registration" 
+                        class="form-control" 
+                        placeholder="Enter your Name / e.g.: Nick" 
+                        onkeydown="validationNameRegistration()"
+                        pattern="^[a-zA-Z ]*$" 
+                        title="only names are allowed (characters from A to Z)"
+                        required>
+                        
+                        <label for="your-name-registration" class="placerholder" ></label> 
+                        <span id="error-name-registration" class="span-red"></span>
+                        <span id="text-name-registration"></span>
+                    </div>
+
+                    <!-- email -->
+                    <div class="input-container ic2">
+                        <label for="your-email-registration" class="text-white ... required icon-email">Please your email.</label> 
+                        <input 
+                        id="your-email-registration" 
+                        type="email" 
+                        name="your-email-registration" 
+                        class="form-control" 
+                        placeholder="Enter your Email / e.g.: youremail123@gmail.com" 
+                        onkeydown="validationEmailRegistration()"
+                        pattern="^([a-z0-9]+(?:[.!#$%&'*+\\/=?^_`{|}~-][a-z0-9]+)*)@([a-z0-9]+(?:[.-][a-z0-9]+)*\.[a-z]{2,})$"
+                        tittle="only email valid is allowed (e.g.: anyemail123@ggmail.com)"
+                        required>
+                        
+                        <label for="your-email-registration" class="placerholder"></label>
+                        <span id="error-email-registration" class="span-red"></span>
+                        <span id="text-email-registration"></span>
+                    </div>
+
+                    <!-- password -->
+                    <div class="input-container v-r-password ic2">
+                        <label for="your-password" class="text-white ... required icon-password">Please enter your password</label>
+                        <input 
+                        id="your-password" 
+                        type="password" 
+                        name="your-password" 
+                        class="form-control" 
+                        placeholder="Enter your password" 
+                        onkeydown="validationPasswordRegistration()" 
+                        pattern="/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])(?!.*\s).{6,16}$/"
+                        title="enter a password"
+                        required>
+                        
+                        <label for="your-password" class="placerholder"></label>
+                        <span id="error-password" class="span-red"></span>
+                        <span id="r-text-password-valid"></span>
+                    </div>
+
+                    <!-- Re-password -->
+                    <div class="input-container v-r-repassword ic2">
+                        <label for="re-password" class="text-white ... required icon-password">Please re-enter your password</label>
+                        <input 
+                            id="re-password" 
+                            type="password" 
+                            name="re-password" 
+                            class="form-control" 
+                            placeholder="Re-enter your password" 
+                            onkeyup="validatePasswordMatch()"
+                            title="re-write the password"
+                            required>
+                        <label for="re-password" class="placeholder"></label>
+                    </div>
+                    
+                    <!-- Password match status -->
+                    <span id="password-match-status" class="span-red"></span>
+
+                    <!-- this is a radio button input section -->
+                    <section class="m-1 lg:m-auto">
+                        <p class="mb-4 text-white">Your preferred suburb:</p>
+                        <section class="flex flex-wrap">
+                            <section class="form-check form-check-inline mr-3">
+                                <input
+                                    class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-red-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                    type="radio"
+                                    name="inlineRadioOptions"
+                                    id="inlineRadio1"
+                                    value="option1"
+                                />
+                                <label class="form-check-label inline-block text-white" for="inlineRadio1"
+                                    >Ashgrove
+                                </label>
+                            </section>
+                            <section class="form-check form-check-inline mr-3">
+                                <input
+                                    class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-red-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                    type="radio"
+                                    name="inlineRadioOptions"
+                                    id="inlineRadio2"
+                                    value="option2"
+                                />
+                                <label class="form-check-label inline-block text-white" for="inlineRadio2"
+                                    >Brisbane City
+                                </label>
+                            </section>
+                            <section class="form-check form-check-inline mr-3">
+                                <input
+                                    class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-red-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                    type="radio"
+                                    name="inlineRadioOptions"
+                                    id="inlineRadio3"
+                                    value="option2"
+                                />
+                                <label class="form-check-label inline-block text-white" for="inlineRadio3"
+                                    >Chermside
+                                </label>
+                            </section>
+                            <section class="form-check form-check-inline mr-3">
+                                <input
+                                    class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-red-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                    type="radio"
+                                    name="inlineRadioOptions"
+                                    id="inlineRadio4"
+                                    value="option2"
+                                />
+                                <label class="form-check-label inline-block text-white" for="inlineRadio4"
+                                    >Graceville
+                                </label>
+                            </section>
+                            <section class="form-check form-check-inline mr-3">
+                                <input
+                                    class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-red-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                    type="radio"
+                                    name="inlineRadioOptions"
+                                    id="inlineRadio5"
+                                    value="option2"
+                                />
+                                <label class="form-check-label inline-block text-white" for="inlineRadio5"
+                                    >Westlake
+                                </label>
+                            </section>
+                        </section>
+                    </section>
+
+                    <input type="submit" class="submit" value="Send">
+                    
+                </form>
+                <span id="r-text-password-requirements"></span>
+            </section> 
+        </section>
+
+        <!-- chatbox help link -->
+        <div class="help-link-component"></div>
+
+        <footer class="footer-component footer">
+        </footer>
+
+    </main>
+</body>
+
+</html>
