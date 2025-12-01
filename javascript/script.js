@@ -1,6 +1,6 @@
 // nav componet that print the mavigation bar for each page
 
-fetch("/html/components/nav.html")
+fetch("https://matein117.github.io/MLStrengthGYM.github.io/html/components/nav.html")
     .then((Response) => Response.text())
 	.then((component_html) => {
 		let list_of_elements = document.getElementsByClassName("nav-component");
@@ -19,7 +19,7 @@ fetch("/html/components/nav.html")
 	});
 
 // footer component 
-fetch("/html/components/footer.html")
+fetch("https://matein117.github.io/MLStrengthGYM.github.io/html/components/footer.html")
     .then((Response) => Response.text())
 	.then((component_html) => {
 		let list_of_elements = document.getElementsByClassName("footer-component");
@@ -32,7 +32,7 @@ fetch("/html/components/footer.html")
 
 // chat-box helplink
 
-fetch("/html/components/helpLink.html")
+fetch("https://matein117.github.io/MLStrengthGYM.github.io/html/components/helpLink.html")
     .then((Response) => Response.text())
 	.then((component_html) => {
 		let list_of_elements = document.getElementsByClassName("help-link-component");
