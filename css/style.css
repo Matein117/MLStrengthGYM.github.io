@@ -476,9 +476,9 @@ footer {
     height: 150vh;
     width: 100%;
     background-position: center;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("images/h1_hero.png");
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("images/h1_hero.png");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("images/h1_hero.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("/images/h1_hero.png");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/h1_hero.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/h1_hero.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
