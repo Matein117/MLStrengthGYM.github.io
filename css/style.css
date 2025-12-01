@@ -476,9 +476,9 @@ footer {
     height: 150vh;
     width: 100%;
     background-position: center;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("/images/h1_hero.png");
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/h1_hero.png");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/h1_hero.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("images/h1_hero.png");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("images/h1_hero.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("images/h1_hero.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -536,33 +536,33 @@ footer {
 }
 
 .brisbane-city {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0))), url("/images/facilities5.jpg");
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities5.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities5.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0))), url("images/facilities5.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("images/facilities5.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("images/facilities5.jpg");
 }
 
 .ashgrove {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0))), url("/images/facilities6.jpg");
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities6.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities6.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0))), url("images/facilities6.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("images/facilities6.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("images/facilities6.jpg");
 }
 
 .chermside {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0))), url("/images/facilities7.jpg");
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities7.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("/images/facilities7.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0))), url("images/facilities7.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("images/facilities7.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url("images/facilities7.jpg");
 }
 
 .graceville {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))), url("/images/facilities9.jpg");
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("/images/facilities9.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("/images/facilities9.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))), url("images/facilities9.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("images/facilities9.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("images/facilities9.jpg");
 }
 
 .westlake {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))), url("/images/facilities4.2.jpg");
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("/images/facilities4.2.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("/images/facilities4.2.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))), url("images/facilities4.2.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("images/facilities4.2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("images/facilities4.2.jpg");
 }
 
 .logo-menu {
@@ -638,9 +638,9 @@ footer {
     height: 100vh;
     width: 100%;
     background-position: center;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("/images/shop-presentation.jpg");
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/shop-presentation.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/shop-presentation.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("images/shop-presentation.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("images/shop-presentation.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("images/shop-presentation.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -690,9 +690,9 @@ footer {
 .container-staff {
     height: 100vh;
     width: 100%;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("/images/about.png");
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/about.png");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("/images/about.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 1))), url("images/about.png");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("images/about.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url("images/about.png");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -837,7 +837,7 @@ hiding input on mobile view will hide three input which are:
 
 /* icons in each text */
 /* .icon-name {
-    background-image: url(/images/person-circle-outline.svg);
+    background-image: url(images/person-circle-outline.svg);
     position: relative;
 }
 .icon-username {
@@ -879,7 +879,7 @@ hiding input on mobile view will hide three input which are:
     height: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/images/iconmonstr-user-19-240.png);
+    background-image: url(images/iconmonstr-user-19-240.png);
 }
 
 .icon-username::after {
@@ -891,7 +891,7 @@ hiding input on mobile view will hide three input which are:
     height: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/images/iconmonstr-user-8-240.png);
+    background-image: url(images/iconmonstr-user-8-240.png);
 }
 
 .icon-email::after {
@@ -903,7 +903,7 @@ hiding input on mobile view will hide three input which are:
     height: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/images/iconmonstr-mail-thin-240.png);
+    background-image: url(images/iconmonstr-mail-thin-240.png);
 }
 
 .icon-phone::after {
@@ -915,7 +915,7 @@ hiding input on mobile view will hide three input which are:
     height: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/images/iconmonstr-phone-thin-240.png);
+    background-image: url(images/iconmonstr-phone-thin-240.png);
 }
 
 .icon-fax::after {
@@ -927,7 +927,7 @@ hiding input on mobile view will hide three input which are:
     height: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/images/iconmonstr-fax-2-240.png);
+    background-image: url(images/iconmonstr-fax-2-240.png);
 }
 
 .icon-messenger::after {
@@ -939,7 +939,7 @@ hiding input on mobile view will hide three input which are:
     height: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/images/iconmonstr-pencil-square-filled-240.png);
+    background-image: url(images/iconmonstr-pencil-square-filled-240.png);
 }
 
 .icon-username::after {
@@ -951,7 +951,7 @@ hiding input on mobile view will hide three input which are:
     height: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/images/iconmonstr-user-8-240.png);
+    background-image: url(images/iconmonstr-user-8-240.png);
 }
 
 .icon-password::after {
@@ -963,7 +963,7 @@ hiding input on mobile view will hide three input which are:
     height: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/images/iconmonstr-key-12-240.png);
+    background-image: url(images/iconmonstr-key-12-240.png);
 }
 
 
@@ -1059,7 +1059,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/valid.png");
+    background: url("images/valid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1071,7 +1071,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/invalid.png");
+    background: url("images/invalid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1089,7 +1089,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/valid.png");
+    background: url("images/valid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1101,7 +1101,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/invalid.png");
+    background: url("images/invalid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1119,7 +1119,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/valid.png");
+    background: url("images/valid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1131,7 +1131,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/invalid.png");
+    background: url("images/invalid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1149,7 +1149,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/valid.png");
+    background: url("images/valid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1161,7 +1161,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/invalid.png");
+    background: url("images/invalid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1179,7 +1179,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/valid.png");
+    background: url("images/valid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1191,7 +1191,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/invalid.png");
+    background: url("images/invalid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1219,7 +1219,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/valid.png");
+    background: url("images/valid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1231,7 +1231,7 @@ hiding input on mobile view will hide three input which are:
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/images/invalid.png");
+    background: url("images/invalid.png");
     background-size: cover;
     z-index: 1000;
   }
@@ -1286,15 +1286,15 @@ hiding input on mobile view will hide three input which are:
 
 
 .bg-st1 {
-    background-image: url(/images/staff1.jpg);
+    background-image: url(images/staff1.jpg);
 }
 
 .bg-st2 {
-    background-image: url(/images/staff2.jpg);
+    background-image: url(images/staff2.jpg);
 }
 
 .bg-st3 {
-    background-image: url(/images/staff3.jpg);
+    background-image: url(images/staff3.jpg);
 }
 
 
